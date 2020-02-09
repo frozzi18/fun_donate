@@ -22,7 +22,13 @@ class App extends Component {
       <div className="App antialiased text-gray-900">
         <div className="bg-gray-200 min-h-screen">
           <Header />
-          <Companies />
+          <Companies companies={this.state.companies} />
+          {/* {this.state.companies.map(company => (
+            <div>
+              <li>{company.title}</li>
+              <li>{company.title}</li>
+            </div>
+          ))} */}
         </div>
       </div>
     );
