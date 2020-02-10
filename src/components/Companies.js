@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 
 export default class Companies extends Component {
   render() {
-    return this.props.companies.map(company => (
-      <CompanyList key={company.id} company={company} />
-      //   <div>{company.title}</div>
-    ));
+    return (
+      <div className="flex flex-wrap mb-4">
+        {this.props.companies.map(company => (
+          <CompanyList key={company.id} company={company} />
+        ))}
+      </div>
+    );
   }
 }
 
